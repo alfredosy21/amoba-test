@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "09a3678f-294f-45b2-882e-3ca5be1ff5f6",
+		"name": "Amoba Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "pruebas@amobasoftware.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "134679",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of persons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NjM4MjJhMy02ZTIzLTQzYTYtYjU4YS0zYTBmZjNlYjFlNjkiLCJqdGkiOiJmYTgxYTQwYzI4ZjViOWY1NDk3MWFiMDI0ODk2MjRmNzg5NTE4MmQ1NjQxZjFhZTE0NTM2YTk0ZGUyZGU1N2MzOTZhZjUyNjhlYzY0OTBhMiIsImlhdCI6MTY1MTY4NDg2NS4wMzI5NiwibmJmIjoxNjUxNjg0ODY1LjAzMjk2NywiZXhwIjoxNjgzMjIwODY0LjU1NDI1MSwic3ViIjoiMSIsInNjb3BlcyI6W119.Q9qKDLzmhfU-CU0HpN5HANFJvnteIrr5zCsQlc8XKIF9kXDWjcdZwhRUFjSXui3VZDfYwQK6Ry_qoMr8Y11NJgZpUONY2VTekEuf1-5vyP-ue6YL2i48JzzsVx2bcT0kXa8H2V724YkS9_mNohsq0ChQ8mY3VI6aCk5ePVcjOGiituuc0jM7AnjP_pOPaxkNFOMiYtfK-k0vKTykTsdzpWHtzjOsnof9NNQHVN_6EJUPVi-TbRerotJBf0IidK6qaUR1fenYPoz4s5D06CwM6hN3RVGgjuo-ROpLFctweSG4ioqhm2V8IF4nOw6YxFvOoGjuE3PnYSb6G_bLW1TMa2NtUxs5LDmL9JvF59CtlC92kFydibEpxOU5RXnfj5Uyo4yGnsmWyzYiAID34JNF2Zqh7GAbRS1a2YJniF-WeQ87Jw42p0vKQaGU4jpIpQai438xmEHCG11yPEJCM0XSaNpQ7Um7AjV6sOFrt8Nwrzgmj73OfAaPd6Z4DXFzNZuFS87n5E3WLCBQinm4FT-fZEYPl-pvnHtEm8vWP93ZRVgKhXNiJlkcsSJPzny_YYMpUfbbDkUSv4rJzIVkeE8DSm1FgULRWbnTCxv_tNTav2MwxEZ79MGQ0A4-Ls5kFAIzwtZk49Au4sX3wJKtNApGMbZolkBRNwtZ0ay65dBtrpI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/persons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"persons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new person",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NjM4MjJhMy02ZTIzLTQzYTYtYjU4YS0zYTBmZjNlYjFlNjkiLCJqdGkiOiJiNzBiZjQ2N2JiMjdhZDRjNDdkYmMxNDNlZGE4Mjg0YWYxNDk4MTMwYTVmZDMzOTViODM2OGZhNzM2NTU1YmRjOTA2NWEwNmMwNjMxZGRmMiIsImlhdCI6MTY1MTY4NjE4Mi4wNTU5ODcsIm5iZiI6MTY1MTY4NjE4Mi4wNTU5OTMsImV4cCI6MTY4MzIyMjE4MS45OTk2NTEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.A5j0bCtlV5j6D5jZ9I2IhUpu25cI57Q_F06LktaVybz57RbDmlj_vyiyDev-LQSIjLQcFwKZh232qP78UUyguUAJulP7kCsHCE9sjPTPoZiC9e-7QaCS-ROvZNbDO-ZDxnK84RWve9Pw7sV4m6qkrOqLX_-GWao2yiY2cmFhLLova_JObyI8FhQQOfDeQful-U-llcHDMW59lGBWlMaCqVi_qALziyvSuAkuUMezuInjhkWK1royrmILDaH-gGDEEwvbQan7yhEfjKVqCq8Hgzi7aUxziFdZsf6WUpzwFFoYCepM2iPU1FFuhel1PcYRbtOyhD3vc7pvnYmMF5oF0UN_IymhwKN5o8h04E7xGfulZ-tRw9LeVhfUUOKIQXatJS3DEkemb8VIB37s0LZPUA6c_1OdHNKz-96ICHRMk1ERli3ZUlrSesVjuQZj7ZnacJRt2jaFTUIbnZ35kr7GlnhyHSAohsEPFo-6JZfNDwL0l1r8KH7-2KN9M5cb-xCmMqD6LEXoRJalAisiahN-9a85KWFNjlZ9e0waJvo_vqV6kLUyfnKYAslQE7aY6KHzRXIDG4kmvruLI-bjqqagGg85B5lHnrMjKEM_ltv5Qqi6hsqyOoNNjztXfz-rXQ-e1VD3Rxv1vg75BZZBCkryYCl4B2a-ESGkB12fU1pLLDQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Alfredo",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Geraldo",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "ima_profile",
+							"value": "default.png",
+							"type": "text"
+						},
+						{
+							"key": "level",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/persons/?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"persons",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit person",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NjM4MjJhMy02ZTIzLTQzYTYtYjU4YS0zYTBmZjNlYjFlNjkiLCJqdGkiOiJiNzBiZjQ2N2JiMjdhZDRjNDdkYmMxNDNlZGE4Mjg0YWYxNDk4MTMwYTVmZDMzOTViODM2OGZhNzM2NTU1YmRjOTA2NWEwNmMwNjMxZGRmMiIsImlhdCI6MTY1MTY4NjE4Mi4wNTU5ODcsIm5iZiI6MTY1MTY4NjE4Mi4wNTU5OTMsImV4cCI6MTY4MzIyMjE4MS45OTk2NTEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.A5j0bCtlV5j6D5jZ9I2IhUpu25cI57Q_F06LktaVybz57RbDmlj_vyiyDev-LQSIjLQcFwKZh232qP78UUyguUAJulP7kCsHCE9sjPTPoZiC9e-7QaCS-ROvZNbDO-ZDxnK84RWve9Pw7sV4m6qkrOqLX_-GWao2yiY2cmFhLLova_JObyI8FhQQOfDeQful-U-llcHDMW59lGBWlMaCqVi_qALziyvSuAkuUMezuInjhkWK1royrmILDaH-gGDEEwvbQan7yhEfjKVqCq8Hgzi7aUxziFdZsf6WUpzwFFoYCepM2iPU1FFuhel1PcYRbtOyhD3vc7pvnYmMF5oF0UN_IymhwKN5o8h04E7xGfulZ-tRw9LeVhfUUOKIQXatJS3DEkemb8VIB37s0LZPUA6c_1OdHNKz-96ICHRMk1ERli3ZUlrSesVjuQZj7ZnacJRt2jaFTUIbnZ35kr7GlnhyHSAohsEPFo-6JZfNDwL0l1r8KH7-2KN9M5cb-xCmMqD6LEXoRJalAisiahN-9a85KWFNjlZ9e0waJvo_vqV6kLUyfnKYAslQE7aY6KHzRXIDG4kmvruLI-bjqqagGg85B5lHnrMjKEM_ltv5Qqi6hsqyOoNNjztXfz-rXQ-e1VD3Rxv1vg75BZZBCkryYCl4B2a-ESGkB12fU1pLLDQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Alfredo Alejandro",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Geraldo Geraldo",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "ima_profile",
+							"value": "default.png",
+							"type": "text"
+						},
+						{
+							"key": "type_person",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Person",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NjM4MjJhMy02ZTIzLTQzYTYtYjU4YS0zYTBmZjNlYjFlNjkiLCJqdGkiOiJiNzBiZjQ2N2JiMjdhZDRjNDdkYmMxNDNlZGE4Mjg0YWYxNDk4MTMwYTVmZDMzOTViODM2OGZhNzM2NTU1YmRjOTA2NWEwNmMwNjMxZGRmMiIsImlhdCI6MTY1MTY4NjE4Mi4wNTU5ODcsIm5iZiI6MTY1MTY4NjE4Mi4wNTU5OTMsImV4cCI6MTY4MzIyMjE4MS45OTk2NTEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.A5j0bCtlV5j6D5jZ9I2IhUpu25cI57Q_F06LktaVybz57RbDmlj_vyiyDev-LQSIjLQcFwKZh232qP78UUyguUAJulP7kCsHCE9sjPTPoZiC9e-7QaCS-ROvZNbDO-ZDxnK84RWve9Pw7sV4m6qkrOqLX_-GWao2yiY2cmFhLLova_JObyI8FhQQOfDeQful-U-llcHDMW59lGBWlMaCqVi_qALziyvSuAkuUMezuInjhkWK1royrmILDaH-gGDEEwvbQan7yhEfjKVqCq8Hgzi7aUxziFdZsf6WUpzwFFoYCepM2iPU1FFuhel1PcYRbtOyhD3vc7pvnYmMF5oF0UN_IymhwKN5o8h04E7xGfulZ-tRw9LeVhfUUOKIQXatJS3DEkemb8VIB37s0LZPUA6c_1OdHNKz-96ICHRMk1ERli3ZUlrSesVjuQZj7ZnacJRt2jaFTUIbnZ35kr7GlnhyHSAohsEPFo-6JZfNDwL0l1r8KH7-2KN9M5cb-xCmMqD6LEXoRJalAisiahN-9a85KWFNjlZ9e0waJvo_vqV6kLUyfnKYAslQE7aY6KHzRXIDG4kmvruLI-bjqqagGg85B5lHnrMjKEM_ltv5Qqi6hsqyOoNNjztXfz-rXQ-e1VD3Rxv1vg75BZZBCkryYCl4B2a-ESGkB12fU1pLLDQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
